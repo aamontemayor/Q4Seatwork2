@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ 	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+	<title>Q4 Seatwork 2</title>
+	<style>
+		.container{
+			text-align: center;
+			padding: 40px;
+		}
+		.container-fluid{
+			padding: 40px;
+
+		}
+		h1{
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 40px;
+			font-family: 'Alegreya Sans', sans-serif;
+		}
+		h3{
+			text-transform: uppercase;
+			font-size: 30px;
+			font-family: 'Alegreya Sans', sans-serif;
+		}
+		th{
+			font-size: 20px;
+			font-family: 'Alegreya Sans', sans-serif;
+		}
+		p, td{
+			font-size: 17px;
+			font-family: 'Alegreya Sans', sans-serif;
+		}
+		input{
+			padding: 7px 13px;
+			width: 70%;
+			font-family: 'Alegreya Sans', sans-serif;
+		}
+		#button1{
+  			border-radius: 10px;
+  			padding: 7px 17px;
+  			background-color: #FAFAFA;
+  			font-family: 'Alegreya Sans', sans-serif;
+		}
+		#button2{
+  			border-radius: 10px;
+  			padding: 7px 17px;
+  			background-color: #FAFAFA;
+  			font-family: 'Alegreya Sans', sans-serif;
+		}
+	</style>
+</head>
+<body onload="alert('Joining Temperature Calculator...')">
+	<br>
+	<br>
+	<h1><b>Temperature Calculator</b></h1>
+	<br>
+	<hr>
+	<br>
+	<br>
+	<div class="container">
+		<table class="table table-bordered">
+				<tr>
+					<th scope="col" style="text-align: center;">Fahrenheit to Celsius</th>
+					<th scope="col" style="text-align: center;">Celsius to Fahrenheit</th>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="container" style="background-color: #205072;">
+							<br>
+							<br>
+							<input type="number" name="input1" id="input1" placeholder="Fahrenheit" >
+							<br>
+							<br>
+							<input type="number" name="input2" id="input2" placeholder="Celsius" >
+							<br>
+							<br>
+							<button type="submit" id="button1"  onclick="Convert1()">Convert</button>
+							<button type="submit" id="button2"  onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+					<th>
+						<div class="container" style="background-color: #329D9C;">
+							<br>
+							<br>
+							<input type="number" name="input3" id="input3" placeholder="Celsius" >
+							<br>
+							<br>
+							<input type="number" name="input4" id="input4" placeholder="Fahrenheit" >
+							<br>
+							<br>
+							<button type="submit" id="button1"  onclick="Convert2()">Convert</button>
+							<button type="submit" id="button2"  onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+				</tr>
+
+				<tr>
+					<th scope="col" style="text-align: center;">Fahrenheit to Kelvin</th>
+					<th scope="col" style="text-align: center;">Celcius to Kelvin</th>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="container" style="background-color: #56C596;">
+							<br>
+							<br>
+							<input type="number" name="input5" id="input5" placeholder="Fahrenheit" >
+							<br>
+							<br>
+							<input type="number" name="input6" id="input6" placeholder="Kelvin" >
+							<br>
+							<br>
+							<button type="submit" id="button1"  onclick="Convert3()">Convert</button>
+							<button type="submit" id="button2"  onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+					<th>
+						<div class="container" style="background-color: #7BE495;">
+							<br>
+							<br>
+							<input type="number" name="input7" id="input7" placeholder="Celsius" >
+							<br>
+							<br>
+							<input type="number" name="input8" id="input8" placeholder="Kelvin" >
+							<br>
+							<br>
+							<button type="submit" id="button1"  onclick="Convert4()">Convert</button>
+							<button type="submit" id="button2"  onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+				</tr>
+
+				<tr>
+					<th scope="col" style="text-align: center;">Kelvin to Fahrenheit</th>
+					<th scope="col" style="text-align: center;">Kelvin to Celsius</th>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="container" style="background-color: #CFF4D2;">
+							<br>
+							<br>
+							<input type="number" name="input9" id="input9" placeholder="Kelvin" >
+							<br>
+							<br>
+							<input type="number" name="input10" id="input10" placeholder="Fahrenheit" >
+							<br>
+							<br>
+							<button type="submit" id="button1" onclick="Convert5()">Convert</button>
+							<button type="submit" id="button2" onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+					<th>
+						<div class="container" style="background-color: #D4EFDF;">
+							<br>
+							<br>
+							<input type="number" name="input11" id="input11" placeholder="Kelvin" >
+							<br>
+							<br>
+							<input type="number" name="input12" id="input12" placeholder="Celsius" >
+							<br>
+							<br>
+							<button type="submit" id="button1"  onclick="Convert6()">Convert</button>
+							<button type="submit" id="button2"  onclick="window.location.reload();">Clear</button>
+							<br>
+						</div>
+					</th>
+				</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<h3>Today's Date and Time:</h3>
+		<p id="today"></p>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-7">
+					<table class="table table-bordered">
+						<tr style="background-color: #205072; color: white;">
+							<th scope="col">Fahrenheit (°F)</th>
+							<th scope="col">Celsius (°C)</th>
+							<th scope="col">Description</th>
+						</tr>
+						<tr>
+							<td>-459.67 °F</td>
+							<td>-273.15 °C</td>
+							<td>Absolute zero temperature</td>
+						</tr>
+						<tr>
+							<td>32 °F</td>
+							<td>0 °C</td>
+							<td>Freezing/melting point of water</td>
+						</tr>
+						<tr>
+							<td>69.8 °F</td>
+							<td>21 °C</td>
+							<td>Room temperature</td>
+						</tr>
+						<tr>
+							<td>98.6 °F</td>
+							<td>37 °C</td>
+							<td>Average body temperature</td>
+						</tr>
+						<tr>
+							<td>212 °F</td>
+							<td>100 °C</td>
+							<td>Boiling point of water</td>
+						</tr>
+				</table>
+			</div>
+			<div class="col-5" style="text-align: left;">
+				<h3>Fahrenheit</h3>
+				<br>
+				<p>The Fahrenheit (symbol: °F) is a unit of temperature that was widely used prior to metrication. It is currently defined by two fixed points: the temperature at which water freezes, 32°F, and the boiling point of water, 212°F, both at sea level and standard atmospheric pressure. The interval between the freezing and boiling point is divided into 180 equal parts.</p>
+			</div>
+			<div class="col-5" style="text-align: left;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h3>Celsius</h3>
+				<br>
+				<p>The Celsius (symbol: °C) is an SI (International System of Units) derived unit of temperature. It is defined based on the SI unit of temperature, the kelvin. The Celsius and Kelvin scales are precisely related, with a one-degree change in Celsius being equal to a one degree-change in kelvin. The kelvin (and thus Celsius) is defined based on the Boltzmann constant, k, which equals 1.380649 × 10-23 when expressed in the unit J·K-1, a unit equivalent to kg·m2·s-2·K-1. The kilogram, meter, and second, are defined based on Planck's constant, h, the speed of light, c, and cesium frequency, ΔνCs.</p>
+			</div>
+			<div class="col-7">
+				<table class="table table-bordered">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+						<tr style="background-color: #329D9C; color: white;" >
+							<th scope="col">Celsius (°C)</th>
+							<th scope="col">Kelvin (K)</th>
+							<th scope="col">Description</th>
+						</tr>
+						<tr>
+							<td>-273.15 °C</td>
+							<td>0 K</td>
+							<td>Absolute zero temperature</td>
+						</tr>
+						<tr>
+							<td>0 °C</td>
+							<td>273.15 K</td>
+							<td>Freezing/melting point of water</td>
+						</tr>
+						<tr>
+							<td>21 °C</td>
+							<td>294.15 K	</td>
+							<td>Room temperature</td>
+						</tr>
+						<tr>
+							<td>37 °C6</td>
+							<td>310.15 K</td>
+							<td>Average body temperature</td>
+						</tr>
+						<tr>
+							<td>100 °C</td>
+							<td>373.15 K</td>
+							<td>Boiling point of water</td>
+						</tr>
+				</table>
+			</div>
+			<div class="col-7">
+				<table class="table table-bordered">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+						<tr style="background-color: #56C596; color: white;">
+							<th scope="col">Kelvin (K)</th>
+							<th scope="col">Fahrenheit (°F)</th>
+						</tr>
+						<tr>
+							<td>0 K</td>
+							<td>-459.67 °F</td>
+						</tr>
+						<tr>
+							<td>100 K</td>
+							<td>-279.67 °F</td>
+						</tr>
+						<tr>
+							<td>250 K</td>
+							<td>-9.67 °F</td>
+						</tr>
+						<tr>
+							<td>500 K</td>
+							<td>440.33 °F</td>
+						</tr>
+						<tr>
+							<td>1000 K</td>
+							<td>1340.33 °F</td>
+						</tr>
+				</table>
+			</div>
+			<div class="col-5" style="text-align: left;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h3>Kelvin</h3>
+				<br>
+				<p>The kelvin (symbol: K) is the base unit of thermodynamic temperature in the International System of Units (SI). It is defined as the energy equivalent of the triple point of water as given by Boltzmann's equation. It is also the unit of the Kelvin scale in which the null point (0 K) is the temperature at which all thermal motion ceases, known as absolute zero, or -273.15°C. The definition of the kelvin was changed in 2019. This new definition results in a fundamental change in the kelvin, such that it is now dependent on the definitions of the second, the meter, and the kilogram.</p>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<hr>
+	</div>
+	<script>
+		const date = new Date();
+		document.getElementById("today").innerHTML = date;
+
+		function Convert1() {
+			let input1 = document.getElementById("input1").value;
+			let answer1 = Number (input1 - 32) * 5/9;
+			document.getElementById("input2").value = answer1;
+		}
+
+		function Convert2() {
+			let input3 = document.getElementById("input3").value;
+			let answer2 = Number (input3 * 9/5) + 32;
+			document.getElementById("input4").value = answer2;
+		}
+
+		function Convert3() {
+			let input5 = document.getElementById("input5").value;
+			let answer3 = Number (input5 - 32) * 5/9 + 273.15; 
+			document.getElementById("input6").value = answer3;
+		}
+
+		function Convert4() {
+			let input7 = document.getElementById("input7").value;
+			let answer4 = Number (input7) + 273.15; 
+			document.getElementById("input8").value = answer4;
+		}
+
+		function Convert5() {
+			let input9 = document.getElementById("input9").value;
+			let answer5 = Number (input9 - 273.15) * 9/5 + 32; 
+			document.getElementById("input10").value = answer5;
+		}
+
+		function Convert6() {
+			let input11 = document.getElementById("input11").value;
+			let answer6 = Number (input11) - 273.15; 
+			document.getElementById("input12").value = answer6;
+		}
+	</script>
+</body>
+</html>
